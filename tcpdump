@@ -1,0 +1,15 @@
+tcpdump
+
+Display available network interfaces:
+
+tcpdump -D
+
+
+View live traffic on the interface 
+
+sudo tcpdump -i enp0s3 -n
+
+Filter for ICMP traffic (you can add a protocol filter (ICMP is IPv4 protocol 1):
+
+sudo tcpdump -i enp0s3 -n proto 1
+
