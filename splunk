@@ -1,1 +1,7 @@
 splunk
+======
+
+How to start SPLUNK on Security Onion
+
+sudo /opt/splunk/bin/splunk start
+
