@@ -7,8 +7,3 @@ alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"LOCAL suspicious user
 rule action | protocol | source ip add | source port | flow | destination ip add | destination port | message
 alert          top           any              21         >      10.199.12.8           any               (msg: "TCP packet detected" nd:1000:610)
 
-
-
-
-
-
