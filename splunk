@@ -5,3 +5,18 @@ How to start SPLUNK on Security Onion
 
 sudo /opt/splunk/bin/splunk start
 
+======
+
+Setting Up Splunk
+
+To download Splunk, visit Splunk.com in a browser within your Security Onion VM. Click the "Free Splunk" button in the top right. Unless you already have a Splunk account, you will need to set up a new account. You'll need to use a real email address, as Splunk will send you a message with a link to confirm your account. It should only take a few minutes to confirm your account.
+
+Once logged in, select the Splunk Free download. The main limitation with the free version is the amount of data you can add: it's restricted to 500 megabytes per day. That should be more than enough for the exercises and the project in this course. Select Linux, and then select the .deb package. Since the Security Onion VM is based on Ubuntu, this will be the easiest to install.
+
+Once downloaded, install it:
+
+sudo apt install ~/Downloads/splunk*.deb
+
+Once installed, start Splunk by running:
+
+sudo /opt/splunk/bin/splunk start
