@@ -13,3 +13,33 @@ Filter for ICMP traffic (you can add a protocol filter (ICMP is IPv4 protocol 1)
 
 sudo tcpdump -i enp0s3 -n proto 1
 
+========
+https://www.youtube.com/watch?v=TA_ec8P5az4&t=15s
+========
+
+Summary of tcpdump Options
+
+There is a full list of options in the tcpdump Documentation.
+
+-i specifies the network interface to monitor
+
+-D lists the available interfaces to monitor (for use with -i)
+
+-n indicates that tcpdump should use numeric values for IP addresses and ports instead of DNS pointer records
+
+-w writes the captured data to a pcap file
+
+-r reads data from a pcap file
+
+
+Use case: 
+
+While capturing live traffic in one terminal window, you can open another terminal window and generate some network traffic. This example will send 3 ping requests to one of Google's nameservers:
+
+ping -c 3 8.8.8.8
+
+To write the captured packets to a file, use the -w option:
+ sudo tcpdump -i enp0s3 -n proto 1 -w ping.pcap
+You can read captured packets from a file using the -r option:
+ sudo tcpdump -i enp0s3 -n -r ping.pcap
+
