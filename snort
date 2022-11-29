@@ -9,3 +9,9 @@ alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"LOCAL suspicious user
 rule action | protocol | source ip add | source port | flow | destination ip add | destination port | message
 alert          top           any              21         >      10.199.12.8           any               (msg: "TCP packet detected" nd:1000:610)
 
+
+
+------------------SNORT RULE EXAMPLE----------------------
+
+#This alert will search for activity that is related to Coin mining malware (where xxxx is the applicable eventID you are looing for)
+Alert "Malicious Crypto miner detection" If EventID = XXXX AND Log_Source = WindowsEventLogs AND ProcessName = (*crypto* OR *miner*)
