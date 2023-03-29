@@ -1,0 +1,10 @@
+Command Prompt commands that may be useful:
+
+This command will show all the wifi's you've ever connected to on that laptop
+
+netsh wlan show profile
+
+This command will now show the profile of the wifi you enter
+
+netsh wlan show profile "examplessid" key=clear
+
