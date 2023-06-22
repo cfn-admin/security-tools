@@ -15,3 +15,10 @@ alert          top           any              21         >      10.199.12.8     
 
 #This alert will search for activity that is related to Coin mining malware (where xxxx is the applicable eventID you are looing for)
 Alert "Malicious Crypto miner detection" If EventID = XXXX AND Log_Source = WindowsEventLogs AND ProcessName = (*crypto* OR *miner*)
+
+
+===========================================
+TRY HACK ME
+===========================================
+snort
+
